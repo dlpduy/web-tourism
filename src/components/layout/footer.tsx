@@ -12,10 +12,10 @@ const Footer = () => {
                 <div className="footer-section">
                     <h3>Mạng xã hội</h3>
                     <p>
-                        <a href="https://facebook.com" target='new'>Facebook</a>
+                        <a href="https://www.facebook.com/profile.php?id=61563743409457 " target='new'>Facebook</a>
                     </p>
                     <p>
-                        <a href="https://instagram.com" target='new'>Instagram</a>
+                        <a href="https://www.instagram.com/_yen.ig/" target='new'>Instagram</a>
                     </p>
                 </div>
             </div>
