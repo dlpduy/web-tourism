@@ -1,0 +1,59 @@
+body {
+    background-color: #e6ddd5;
+    font-family: cursive;
+}
+
+.container {
+    text-align: center;
+    padding: 10px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 500px;
+    overflow: hidden;
+    /* border: none;
+    box-shadow: 0 4px 8px rgba(65, 63, 63, 0.1); */
+    transition: transform 0.3s;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    cursor: pointer;
+
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-design h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+.card-design p {
+    font-size: 1rem;
+    text-align: left;
+    color: white
+}
+
+.discover-button {
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: cursive;
+    border: none;
+    background-color: #e6ddd5;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-right: 70%;
+}

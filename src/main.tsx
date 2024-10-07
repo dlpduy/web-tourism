@@ -2,32 +2,59 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import LoginPage from './pages/login.tsx'
+
 import Header from './components/layout/header.tsx'
 import Footer from './components/layout/footer.tsx'
 import HomePage from './pages/home.tsx'
+import Register from './pages/register.tsx'
+import Desnitation from './pages/destination.tsx'
+import {
+  QueryClient,
+  QueryClientProvider
+} from '@tanstack/react-query'
+import DesnitationDetail from './pages/destination.detail.tsx'
+
+const queryClient = new QueryClient()
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <>
-      <Header />,
+      <Header />
       <HomePage />
       <Footer />
     </>
   },
   {
-    path: "/login",
+    path: "/destination",
     element: <>
-      <Header />,
-      <LoginPage />
+      <Header />
+      <Desnitation />
       <Footer />
     </>
-
+  },
+  {
+    path: "/about-us",
+    element: <>
+      <Header />
+      <Register />
+      <Footer />
+    </>
+  },
+  {
+    path: "/destination/:id",
+    element: <>
+      <Header />
+      <DesnitationDetail />
+      <Footer />
+    </>
   }
 
 ]);
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </StrictMode>,
 )
