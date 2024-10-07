@@ -115,53 +115,28 @@ const HomePage = () => {
             description: "Đây là rừng ngập nước tiêu biểu của vùng sông Hậu, có tác dụng quan trọng đối với môi trường nước và điều hòa khi hậu cho cả vùng Bảy Núi. Rừng còn là nơi sinh sống của nhiều loài động, thực vật quý thuộc hệ thống rừng đặc dụng Việt Nam.",
             imgSrc: "https://i1-dulich.vnecdn.net/2023/10/18/TS11-8180-1697622340.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=Yd4OyPJ2_Ff9dlD5Znylzw" // Replace with your image path
         }
-
-
-
-
     ];
     return (
         <div
             className="container"
-            style={{
-
-                backgroundImage: "url(" + "https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2024/2/6/cung-dien-trieu-do-2-17072260725861772773748.jpg" + ")",
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat'
-            }}
         >
-            <h1>Our Offerings</h1>
+            <h1>Chuyến đi chăm sóc sức khỏe chuẩn Hoàng gia</h1>
             <div className="card-container">
-                {cards.map((card, index) => (
-                    (card.id % 5 == 0) &&
-                    <Link
-                        to={`/destination/${card.key}`}
-                        style={{
-                            textDecoration: 'none',
-                            color: 'black'
-                        }}
-                    >
-                        <div
-                            className="card"
-                            key={index}
+                <div
+                    className="card"
 
-                        >
-                            <img
-                                src={card.imgSrc}
-                                alt={card.title}
-                                className="card-image"
-                            />
-                            <div className="card-design">
-                                <h2>{card.title}</h2>
-                                <p>{card.description}</p>
-                            </div>
+                >
+                    <img
+                        src={cards[0].imgSrc}
+                        alt={cards[0].title}
+                        className="card-image"
+                    />
+                    <div className="card-design">
+                        <h2>{cards[0].title}</h2>
+                        <p>{cards[0].description}</p>
+                    </div>
 
-                        </div>
-                    </Link>
-                ))
-
-                }
+                </div>
             </div>
         </div>
 

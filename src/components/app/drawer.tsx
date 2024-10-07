@@ -24,9 +24,10 @@ const DrawerComponent = (props: any) => {
 
                     }}
                 >
-                    <Menu.Item><Link to='/'>Trang chủ</Link></Menu.Item>
-                    <Menu.Item><Link to='/destination'>Điểm đến</Link></Menu.Item>
-                    <Menu.Item><Link to='/about-us'>Liên hệ chúng tôi</Link></Menu.Item>
+                    <Menu.Item><Link to='/'>Sản phẩm</Link></Menu.Item>
+                    <Menu.Item><Link to='/trai-nghiem'>Trải nghiệm</Link></Menu.Item>
+                    <Menu.Item><Link to='/uu-dai'>Ưu đãi</Link></Menu.Item>
+                    <Menu.Item><Link to='/ve-chung-toi'>Về chúng tôi</Link></Menu.Item>
                 </Menu>
             </Drawer>
         </>

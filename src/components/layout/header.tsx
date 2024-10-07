@@ -37,24 +37,31 @@ const Header = () => {
 
                 </Menu.Item>
                 <Menu.Item
-                    key="home"
+                    key="san-pham"
                     icon={<HomeOutlined />}
                     onChange={() => setOpen(true)}
                 >
                     <Link
                         to="/"
-                    >Trang chủ</Link>
+                    >Sản phẩm</Link>
                 </Menu.Item>
 
                 <Menu.Item
-                    key="services"
+                    key="trai-nghiem"
                     icon={<ProductOutlined />}
                 >
-                    <Link to="/destination">Điểm đến</Link>
+                    <Link to="/trai-nghiem">Trải Nghiệm</Link>
                 </Menu.Item>
 
                 <Menu.Item
-                    key="about-us"
+                    key="uu-dai"
+                    icon={<ContactsOutlined />}
+                >
+                    <Link to="/uu-dai">Ưu đãi</Link>
+                </Menu.Item>
+
+                <Menu.Item
+                    key="ve-chung-toi"
                     icon={<ContactsOutlined />}
                     style={{
                         justifyContent: 'center',
@@ -63,18 +70,18 @@ const Header = () => {
 
                     }}
                 >
-                    <Link to="/about-us">Về chúng tôi</Link>
+                    <Link to="/ve-chung-toi">Về chúng tôi</Link>
                 </Menu.Item>
 
-                {id &&
-                    <Menu.Item
-                        key="destination-detail"
-                        icon={<ProductOutlined />}
-                        onClick={() => setIsModalOpen(true)}
-                    >
-                        <Link to={`/destination/${id}`}>Đăng ký tư vấn</Link>
-                    </Menu.Item>
-                }
+
+                <Menu.Item
+                    key="destination-detail"
+                    icon={<ProductOutlined />}
+                    onClick={() => setIsModalOpen(true)}
+                >
+                    Đăng ký
+                </Menu.Item>
+
 
             </Menu>
             <DrawerComponent

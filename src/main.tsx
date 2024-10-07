@@ -5,16 +5,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Header from './components/layout/header.tsx'
 import Footer from './components/layout/footer.tsx'
-import HomePage from './pages/home.tsx'
-import Register from './pages/register.tsx'
-import Desnitation from './pages/destination.tsx'
-import {
-  QueryClient,
-  QueryClientProvider
-} from '@tanstack/react-query'
-import DesnitationDetail from './pages/destination.detail.tsx'
-
-const queryClient = new QueryClient()
+import HomePage from './pages/product.tsx'
+import Experience from './pages/experience.tsx'
+import Coupon from './pages/coupon.tsx'
+import AboutUS from './pages/aboutus.tsx'
 
 const router = createBrowserRouter([
   {
@@ -26,26 +20,26 @@ const router = createBrowserRouter([
     </>
   },
   {
-    path: "/destination",
+    path: "/trai-nghiem",
     element: <>
       <Header />
-      <Desnitation />
+      <Experience />
       <Footer />
     </>
   },
   {
-    path: "/about-us",
+    path: "/uu-dai",
     element: <>
       <Header />
-      <Register />
+      <Coupon />
       <Footer />
     </>
   },
   {
-    path: "/destination/:id",
+    path: "/ve-chung-toi",
     element: <>
       <Header />
-      <DesnitationDetail />
+      <AboutUS />
       <Footer />
     </>
   }
@@ -53,8 +47,7 @@ const router = createBrowserRouter([
 ]);
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-    </QueryClientProvider>
+    <RouterProvider router={router} />
+
   </StrictMode>,
 )
